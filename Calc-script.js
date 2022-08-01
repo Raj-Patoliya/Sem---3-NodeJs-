@@ -14,9 +14,16 @@ function operator(element)
         document.getElementById("display").value = 0
     }
  }
- else
+ else 
  {
-    document.getElementById("display").value  = document.getElementById("display").value .concat(operator);
+    let arr = ['+','-','/','*'];
+    let id = document.getElementById("display").value;
+    var lastChar =  id.substr(id.length-1)
+    if(lastChar in arr)
+    {
+        document.getElementById("display").value  = document.getElementById("display").value .concat(operator);
+    }
+    
  }
 }
 function operands(val)
